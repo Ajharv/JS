@@ -4,14 +4,18 @@
 // Function formats the text and returns false.
 function formatNames() {
 	// TODO Declare a variable for storing the formatted name:
-    
+    let formattedName;
     // TODO Get a reference to the form values (hint: use document.getElementById)
-	
+	let firstName = document.getElementById('firstName').value;
+    let lastName = document.getElementById('lastName').value;
 	// TODO Create variables to hold the uppercase initial of each name
-
-	// TODO Create the formatted name (hint: use string concatenation)
+	const firstNameFormatted = firstName.charAt(0).toUpperCase() + firstName.slice(1);
+	const lastNameFormatted = lastName.charAt(0).toUpperCase() + lastName.slice(1);
 	
+	// TODO Create the formatted name (hint: use string concatenation)
+
 	// TODO Display the formatted name
+	document.getElementById('result').value = lastNameFormatted + ', ' + firstNameFormatted;
 	
 	return false;
 } 
